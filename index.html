@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>برای رؤیا</title>
+    <style>
+        body {
+            background: #fff8f0;
+            font-family: 'Vazir', sans-serif;
+            direction: rtl;
+            text-align: center;
+            padding: 30px;
+            color: #4b2e2e;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #d75f00;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .quote {
+            font-style: italic;
+            margin: 30px auto;
+            background: #ffe6cc;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+        }
+        button {
+            margin-top: 40px;
+            padding: 10px 25px;
+            background-color: #fcbf49;
+            border: none;
+            border-radius: 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #f77f00;
+            color: white;
+        }
+        #magicText {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #6a4c93;
+        }
+    </style>
+</head>
+<body>
+    <h1>سلام رؤیا 🌸</h1>
+
+    <div class="quote">یا راهی خواهم ساخت یا ساقی راهم... آخ 🍷😌</div>
+
+    <p>اگه الان حال دلت یه کوچولو فشرده‌ست، اینجا یه فضای کوچیک برای آروم گرفتنه.</p>
+
+    <audio controls autoplay loop style="margin-top: 20px;">
+        <source src="https://audio.jukehost.co.uk/fMuILwJk9uV0pVbcLsxruLYPzCwSVU7J" type="audio/mpeg">
+        موزیک قشنگ حیدو هدایتی
+    </audio>
+
+    <button onclick="showRandomLine()">اگه حالت خوب نیست، اینو بزن 👇</button>
+    <div id="magicText"></div>
+
+    <script>
+        const lines = [
+            'گاهی فقط باید چایی بخوری و وانمود کنی زندگی خوبه ☕',
+            'توی دلت یه باغ پرتقاله... فقط زمستونه الان ❄️🍊',
+            'نفس بکش، آروم... بعدش همه‌چی درست می‌شه 🌬️',
+            'آخ که اگه می‌تونستم الآن یه لیوان هات‌چاکلت بذارم کنار دستت 🍫💛',
+            'شعر خوندن دلتو باز می‌کنه، امتحانش کن: "ز کوی یار می‌آید نسیم باد نوروزی..." 💨'
+        ];
+        function showRandomLine() {
+            const random = lines[Math.floor(Math.random() * lines.length)];
+            document.getElementById('magicText').innerText = random;
+        }
+    </script>
+
+</body>
+</html>
