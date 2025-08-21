@@ -1,105 +1,267 @@
-
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <title>برای رویا</title>
-    <style>
-        body {
-            background: #fff8f0;
-            font-family: 'Vazir', sans-serif;
-            direction: rtl;
-            text-align: center;
-            padding: 30px;
-            color: #4b2e2e;
-        }
-        h1 {
-            font-size: 2.5em;
-            color: #d75f00;
-        }
-        p {
-            font-size: 1.2em;
-            margin-top: 20px;
-        }
-        .quote {
-            font-style: italic;
-            margin: 30px auto;
-            background: #ffe6cc;
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-        }
-        button {
-            margin-top: 40px;
-            padding: 10px 25px;
-            background-color: #fcbf49;
-            border: none;
-            border-radius: 20px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #f77f00;
-            color: white;
-        }
-        #magicText {
-            margin-top: 20px;
-            font-size: 1.2em;
-            color: #6a4c93;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>برای رویا</title>
+<link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        padding: 30px;
+        font-family: 'Vazir', sans-serif;
+        direction: rtl;
+        color: #1b262c;
+        overflow: hidden;
+        background: linear-gradient(to bottom, #a0c4ff, #caf0f8);
+    }
+    h1 {
+        font-size: 2.5em;
+        color: #1e6091;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+    .quote, p, .poem, button, figure {
+        position: relative;
+        z-index: 2;
+    }
+    .quote {
+        font-style: italic;
+        margin: 20px auto;
+        background: rgba(255,255,255,0.5);
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        text-align: center;
+    }
+    p {
+        font-size: 1.2em;
+        text-align: center;
+        margin-top: 20px;
+    }
+    button {
+        display: block;
+        margin: 30px auto;
+        padding: 10px 25px;
+        background-color: #00b4d8;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        font-size: 1em;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover {
+        background-color: #0077b6;
+        transform: scale(1.05);
+    }
+    #magicText {
+        margin-top: 20px;
+        font-size: 1.2em;
+        color: #03045e;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.8s;
+    }
+    #magicText.show { opacity: 1; }
+    .poem {
+        margin: 30px auto;
+        width: 80%;
+        max-height: 250px;
+        overflow-y: auto;
+        background: rgba(255,255,255,0.4);
+        padding: 15px;
+        border-radius: 10px;
+        line-height: 1.8;
+    }
+    figure {
+        margin: 20px auto;
+        width: 80%;
+    }
+    figcaption {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #0077b6;
+    }
+    audio {
+        width: 100%;
+        border-radius: 10px;
+    }
+    canvas { 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        pointer-events: none; 
+        z-index: 1; 
+    }
+</style>
 </head>
 <body>
-    <h1>🌸سلام رویا🌻</h1>
 
-    <div class="quote">🙂‍↔️یا راهی خواهم ساخت یا ساخی راهم آخ 🙂‍↔️</div>
+<h1>🌊 سلام رویا 🌧️</h1>
+<div class="quote">🙂‍↔️یا راهی خواهم ساخت یا ساخی راهم آخ 🙂‍↔️</div>
+<p>اگه الان یه کوچولو بی حالی، اینجا یه فضای کوچیک برای خود خود توعه که توش یه کم حس بهتری داشته باشی.</p>
 
-    <p>اگه الان یه کوچولو بی حالی، اینجا یه فضای کوچیک برای خود خود توعه که توش یه کم حس بهتری داشته باشی.</p>
+<!-- فایل های صوتی -->
+<figure>
+    <figcaption>🎵 Heydoo Hedayati - Gheshang</figcaption>
+    <audio controls>
+        <source src="heydoo_hedayati_-_gheshang_128.mp3" type="audio/mpeg">
+    </audio>
+</figure>
+<figure>
+    <figcaption>🎵 4_6025874760221590755</figcaption>
+    <audio controls>
+        <source src="4_6025874760221590755.mp3" type="audio/mpeg">
+    </audio>
+</figure>
+<figure>
+    <figcaption>🎵 Kina - Get You The Moon feat Snøw</figcaption>
+    <audio controls>
+        <source src="Kina - Get You The Moon feat Snøw (2).mp3" type="audio/mpeg">
+    </audio>
+</figure>
+<figure>
+    <figcaption>🎵 Mohsen Chavoshi - Ghashange Man</figcaption>
+    <audio controls>
+        <source src="Mohsen Chavoshi - Ghashange Man.mp3" type="audio/mpeg">
+    </audio>
+</figure>
+<figure>
+    <figcaption>🎵 yekbarato2bdrum</figcaption>
+    <audio controls>
+        <source src="yekbarato2bdrum.mp3" type="audio/mpeg">
+    </audio>
+</figure>
+<figure>
+    <figcaption>🎵 Karim Sheri - Bara To</figcaption>
+    <audio controls>
+        <source src="karim_sheri_bara_to 128.mp3" type="audio/mpeg">
+    </audio>
+</figure>
+<figure>
+    <figcaption>🎵 For a dream</figcaption>
+    <audio controls>
+        <source src="For a dream.mp3" type="audio/mpeg">
+    </audio>
+</figure>
 
-<audio controls>
- <source src="heydoo_hedayati_-_gheshang_128.mp3" type="audio/mpeg">
-</audio>
-<audio controls>
- <source src="4_6025874760221590755.mp3" type="audio/mpeg">
-</audio>
-<audio controls>
- <source src="Kina - Get You The Moon feat Snøw (2).mp3" type="audio/mpeg">
-</audio>
-<audio controls>
- <source src="Mohsen Chavoshi - Ghashange Man.mp3" type="audio/mpeg">
-</audio>
-<audio controls>
- <source src="yekbarato2bdrum.mp3" type="audio/mpeg">
-</audio>
-<audio controls>
- <source src="karim_sheri_bara_to 128.mp3" type="audio/mpeg">
-</audio>
-<audio controls>
- <source src="For a dream.mp3" type="audio/mpeg">
-</audio>
+<button onclick="showRandomLine()">اگه حالت خوب نیست، اینو بزن 👇</button>
+<div id="magicText"></div>
 
-    <button onclick="showRandomLine()">اگه حالت خوب نیست، اینو بزن 👇</button>
-    <div id="magicText"></div>
+<div class="poem">
+دوش چو آمد بخواب آن مه کامل پدید<br>
+گفت که بر چشم تو این همه رویا چه دید<br>
+چون مه شیرین سخن از دهنش در دمید<br>
+لب به سخن برنخواست برق به چشمان جهید<br>
+چشم به سخن باز کرد لب که برو دل ببین <br>
+تا که به آواز خود آوردت آن نوید <br>
+دل چو به آواز ماه رقص کنان شد پدید <br>
+مه به سوال آدمدش جلوه رویا چه دید <br>
+دل به خجالت فتاد سرخ چو آویز یار<br>
+گفت که در قصه ام پاسخت آید پدید <br>
+در دل یک روز گرم در وسط ماه تیر <br>
+مرد جوانی از خود از به چاه در رهید <br>
+گشت چو ماهی به آب‌ در رخ ماه ای غریق <br>
+دیده خود بر ببست دل به تماشا دوید<br>
+چشم دلش چون فتاد بر رخ زیبای یار <br>
+دیده ی خود باز کرد سیر اله را بدید<br>
+عقل ز خود دست کشید دل به تمنا رسید <br>
+چشم به راهش نشست تا که بیاید پدید<br>
+از حد زیباییش عقل به طفلی رسید<br>
+در هوس موی او طفل به دریا پرید<br>
+دل چو که این قصه گفت لب ز سخن برببست<br>
+چشم به ماهش بدوخت تا که جوابش بدید
+</div>
 
-    <script>
-        const lines = [
-            'گاهی فقط باید چایی بخوری و وانمود کنی زندگی خوبه ☕',
-            'توی دلت یه باغ پرتقاله... فقط زمستونه الان ❄️🍊',
-            'نفس بکش، آروم... بعدش همه‌چی درست می‌شه 🌬️',
-            'آخ که اگه می‌تونستم الآن یه لیوان هات‌چاکلت بذارم کنار دستت 🍫💛',
-            'شعر خوندن دلتو باز می‌کنه، امتحانش کن: "ز کوی یار می‌آید نسیم باد نوروزی..." 💨',
-            ' no matter what you keep finding something to fight for🥋 ',
-            ' امشب تو را به خوبی نسبت به ماه کردم    تو خوب تر ز ماهی من اشتباه کردم🌒🌕🌘',
-            ' به همان قدر که چشم تو پر از زیباییست  بی تو دنیای من ای دوست پر از تنهاییست🥹🥲',
-            'ز کدام رَه رسیدی ز کدام در گذشتی    که ندیده دیده ناگه به درون دل فِتادی❤️😍'
-        
-        ];
-        function showRandomLine() {
-            const random = lines[Math.floor(Math.random() * lines.length)];
-            document.getElementById('magicText').innerText = random;
+<canvas id="rainCanvas"></canvas>
+
+<script>
+// جادوی متن
+const lines = [
+    'گاهی فقط باید چایی بخوری و وانمود کنی زندگی خوبه ☕',
+    'توی دلت یه باغ پرتقاله... فقط زمستونه الان ❄️🍊',
+    'نفس بکش، آروم... بعدش همه‌چی درست می‌شه 🌬️',
+    'آخ که اگه می‌تونستم الآن یه لیوان هات‌چاکلت بذارم کنار دستت 🍫💛',
+    'شعر خوندن دلتو باز می‌کنه، امتحانش کن: "ز کوی یار می‌آید نسیم باد نوروزی..." 💨',
+    'no matter what you keep finding something to fight for🥋',
+    'امشب تو را به خوبی نسبت به ماه کردم    تو خوب تر ز ماهی من اشتباه کردم🌒🌕🌘',
+    'به همان قدر که چشم تو پر از زیباییست  بی تو دنیای من ای دوست پر از تنهاییست🥹🥲',
+    'ز کدام رَه رسیدی ز کدام در گذشتی که ندیده دیده ناگه به درون دل فِتادی❤️😍'
+];
+function showRandomLine() {
+    const magicText = document.getElementById('magicText');
+    magicText.classList.remove('show');
+    setTimeout(() => {
+        const random = lines[Math.floor(Math.random() * lines.length)];
+        magicText.innerText = random;
+        magicText.classList.add('show');
+    }, 100);
+}
+
+// بارون پیشرفته با canvas
+const canvas = document.getElementById('rainCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let drops = [];
+const dropCount = 150;
+const waves = [];
+
+class Drop {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.z = Math.random() * 20 + 10;
+        this.len = this.z / 2;
+        this.yspeed = this.z / 5 + 2;
+    }
+    fall() {
+        this.y += this.yspeed;
+        if (this.y > canvas.height - 5) {
+            waves.push({x: this.x, y: canvas.height-5, r: 0});
+            this.y = Math.random() * -50;
+            this.yspeed = this.z / 5 + 2;
         }
-    </script>
-    <p>دوش چو آمد بخواب آن مه کامل پدید<br>گفت که بر چشم تو این همه رویا چه دید<br>چون مه شیرین سخن از دهنش در دمید<br>لب به سخن برنخواست برق به چشمان جهید<br>چشم به سخن باز کرد لب که برو دل ببین <br>تا که به آواز خود آوردت آن نوید <br>دل چو به آواز ماه رقص کنان شد پدید <br>مه به سوال آدمدش جلوه رویا چه دید <br>دل به خجالت فتاد سرخ چو آویز یار<br>گفت که در قصه ام پاسخت آید پدید <br>در دل یک روز گرم در وسط ماه تیر <br>مرد جوانی از خود از به چاه در رهید <br>گشت چو ماهی به آب‌ در رخ ماه ای غریق <br>دیده خود بر ببست دل به تماشا دوید<br>چشم دلش چون فتاد بر رخ زیبای یار <br>دیده ی خود باز کرد سیر اله را بدید<br>عقل ز خود دست کشید دل به تمنا رسید <br>چشم به راهش نشست تا که بیاید پدید<br>از حد زیباییش عقل به طفلی رسید<br>در هوس موی او طفل به دریا پرید<br>دل چو که این قصه گفت لب ز سخن برببست<br>چشم به ماهش بدوخت تا که جوابش بدید .</p>
+    }
+    show() {
+        ctx.strokeStyle = 'rgba(255,255,255,0.7)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(this.x, this.y);
+        ctx.lineTo(this.x, this.y + this.len);
+        ctx.stroke();
+    }
+}
+
+for(let i=0;i<dropCount;i++){ drops.push(new Drop()); }
+
+function draw() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    for(let d of drops) { d.fall(); d.show(); }
+
+    // رسم موج‌ها
+    for(let i=waves.length-1;i>=0;i--){
+        let w = waves[i];
+        ctx.beginPath();
+        ctx.arc(w.x, w.y, w.r, 0, Math.PI*2);
+        ctx.strokeStyle = 'rgba(255,255,255,'+(1-w.r/20)+')';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        w.r += 0.5;
+        if(w.r>20) waves.splice(i,1);
+    }
+
+    requestAnimationFrame(draw);
+}
+draw();
+
+window.addEventListener('resize',()=>{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+</script>
 </body>
 </html>
